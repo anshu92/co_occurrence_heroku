@@ -34,12 +34,12 @@ def todict(data):
     return obj
 
 
+# @app.route("/")
+# def index():
+#     return render_template("index.html")
+
+
 @app.route("/")
-def index():
-    return render_template("index.html")
-
-
-@app.route("/co_table/analysis")
 def co_table():
     connection = MongoClient(
         "mongodb://anshuman264:VJkCopXqbK5smqf0@cluster0-shard-00-00-ouybv.mongodb.net:27017,"
