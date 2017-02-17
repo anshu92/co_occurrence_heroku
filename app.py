@@ -4,8 +4,16 @@ from pymongo import MongoClient
 import pandas as pd
 from bson import ObjectId
 from operator import itemgetter
+import cf_deployment_tracker
+import os
+
+# Emit Bluemix deployment event
+cf_deployment_tracker.track()
 
 app = Flask(__name__)
+
+port = int(os.getenv('PORT', 8080))
+
 
 MONGODB_HOST = "mongodb://anshuman264:VJkCopXqbK5smqf0@cluster0-shard-00-00-ouybv.mongodb.net:27017,"
 "cluster0-shard-00-01-ouybv.mongodb.net:27017,"
@@ -54,4 +62,4 @@ def co_table():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=port, debug=True)
