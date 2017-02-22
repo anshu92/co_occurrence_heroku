@@ -14,12 +14,8 @@ app = Flask(__name__)
 
 port = int(os.getenv('PORT', 8080))
 
-MONGODB_HOST = "mongodb://anshuman264:VJkCopXqbK5smqf0@cluster0-shard-00-00-ouybv.mongodb.net:27017,"
-"cluster0-shard-00-01-ouybv.mongodb.net:27017,"
-"cluster0-shard-00-02-ouybv.mongodb.net:27017/co_table?ssl=true&replicaSet=Cluster0-shard-0&authSource"
-"=admin"
-MONGODB_PORT = 27017
-DBS_NAME = 'co_table'
+MONGODB_HOST = "mongodb://anshu92:VJkCopXqbK5smqf0@ds157349.mlab.com:57349/co_cluster"
+MONGODB_PORT = 57349
 COLLECTION_NAME = 'co_collection'
 
 
