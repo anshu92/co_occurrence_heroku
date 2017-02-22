@@ -55,7 +55,7 @@ def index():
         pmcid = request.form['pmcid']
         document = dict()
         try:
-            document = collection.find_one({'pmcid': int(pmcid)})
+            document = collection.find_one({'pmcid': pmcid})
 
         except Exception as e:
             print("Unexpected error: ", type(e), e)
