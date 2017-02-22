@@ -35,7 +35,7 @@ def todict(data):
 
 
 @app.route('/', methods=['GET', 'POST'])
-def index():
+def co_table():
     client = pymongo.MongoClient("mongodb://anshu92:VJkCopXqbK5smqf0@ds157349.mlab.com:57349/co_cluster",
                                  connectTimeoutMS=30000,
                                  socketTimeoutMS=None,
